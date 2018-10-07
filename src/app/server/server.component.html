@@ -1,0 +1,22 @@
+<input
+type='text'
+class='form-control'
+[(ngModel)]="serverName">
+<button
+  class='btn btn-primary'
+  [disabled] = "(serverName === '' || !allowNewServer)"
+  (click)="onCreateServer()">Add Server</button>
+<p *ngIf="serverCreationStatus">{{ serverCreationStatus }}</p>
+<div *ngFor='let sv of servers'>
+  <p [ngClass] = '(sv[1] === "online") ? "online" : "offline"'>
+      Server {{ sv[0] }} is {{ sv[1] }}
+  </p>
+</div>
+<button 
+  class='btn'
+  (click)="onDetails()">Display Details</button>
+<p *ngIf = 'displayDetails'>secret password = tuna</p>
+<!-- <input
+  type='text'
+  class='form-control'
+  (input)="onUpdateServerName($event)"> -->
