@@ -1,9 +1,11 @@
 <!-- <app-binding-assignment></app-binding-assignment> -->
-<app-header></app-header>
+<app-header (changeComponent)='onNavigate($event)'></app-header>
 <div class="container-fluid">
-    <div class="col-md-12">        
-        <app-recipe></app-recipe>
-        <app-shopping></app-shopping>  
+    <div class="col-md-12">
+        <div *ngIf="curComponent === 'Recipe';else other">
+            <app-recipe></app-recipe>
+        </div>
+        <ng-template #other><app-shopping></app-shopping></ng-template>
     </div>
 </div>
 <!-- <div class="container text-center">
