@@ -16,6 +16,10 @@ import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-ite
 import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/shopping-edit.component';
+import { BindingAssignmentComponent } from './binding-assignment/binding-assignment.component';
+import { GameControlComponent } from './binding-assignment/game-control/game-control.component';
+import { OddComponent } from './binding-assignment/odd/odd.component';
+import { EvenComponent } from './binding-assignment/even/even.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/sh
     RecipeItemComponent,
     ShoppingComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    BindingAssignmentComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-game-control
+      (periodic)="onPeriodic($event)"></app-game-control>
+    <p>Current value is {{value}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-even [value]="value"></app-even>
+  </div>
+  <div class="col-md-6">
+    <app-odd [value]="value"></app-odd>
+  </div>
+</div>
