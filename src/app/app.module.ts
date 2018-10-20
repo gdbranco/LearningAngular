@@ -26,6 +26,7 @@ import { UserListComponent } from './services-assignment/users/user-list/user-li
 import { ActiveUserComponent } from './services-assignment/users/user-list/active-user/active-user.component';
 import { InactiveUserComponent } from './services-assignment/users/user-list/inactive-user/inactive-user.component';
 import { LoggingService } from './logging.service';
+import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { LoggingService } from './logging.service';
     FormsModule,
     HttpModule
   ],
-  providers: [LoggingService],
+  providers: [LoggingService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
