@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
-  styleUrls: ['./server.component.css']
+  styleUrls: ['./server.component.css'],
+  providers: [LoggingService]
 })
 export class ServerComponent implements OnInit {
   allowNewServer: boolean = false;
@@ -13,7 +15,7 @@ export class ServerComponent implements OnInit {
   serverName: string = 'teste';
   serverStatus: string;
   servers = [["TestServer", "online"], ['AnotherServer', 'offline']];
-  constructor() {
+  constructor(private loggingService: LoggingService) {
     setInterval(()=>{
       this.serverCreated = false;
       this.allowNewServer = true;
@@ -32,7 +34,7 @@ export class ServerComponent implements OnInit {
       this.serverCreated = true
       this.servers.push([this.serverName,this.serverStatus]);
       this.serverName = "";
-      console.log(this.servers);
+      this.loggingService.log(this.servers);
     }, 1000);
   }
 

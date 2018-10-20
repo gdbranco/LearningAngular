@@ -20,6 +20,12 @@ import { BindingAssignmentComponent } from './binding-assignment/binding-assignm
 import { GameControlComponent } from './binding-assignment/game-control/game-control.component';
 import { OddComponent } from './binding-assignment/odd/odd.component';
 import { EvenComponent } from './binding-assignment/even/even.component';
+import { ServicesAssignmentComponent } from './services-assignment/services-assignment.component';
+import { UsersComponent } from './services-assignment/users/users.component';
+import { UserListComponent } from './services-assignment/users/user-list/user-list.component';
+import { ActiveUserComponent } from './services-assignment/users/user-list/active-user/active-user.component';
+import { InactiveUserComponent } from './services-assignment/users/user-list/inactive-user/inactive-user.component';
+import { LoggingService } from './logging.service';
 
 @NgModule({
   declarations: [
@@ -38,14 +44,19 @@ import { EvenComponent } from './binding-assignment/even/even.component';
     BindingAssignmentComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    ServicesAssignmentComponent,
+    UsersComponent,
+    UserListComponent,
+    ActiveUserComponent,
+    InactiveUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
