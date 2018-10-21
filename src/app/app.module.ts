@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { ServerComponent } from './server/server.component';
@@ -27,6 +28,13 @@ import { ActiveUserComponent } from './services-assignment/users/user-list/activ
 import { InactiveUserComponent } from './services-assignment/users/user-list/inactive-user/inactive-user.component';
 import { LoggingService } from './logging.service';
 import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'shoppinglist', component: ShoppingComponent},
+  { path: 'recipes', component: RecipeComponent}
+];
 
 @NgModule({
   declarations: [
@@ -50,12 +58,14 @@ import { ShoppingListService } from './shopping/shopping-list/shopping-list.serv
     UsersComponent,
     UserListComponent,
     ActiveUserComponent,
-    InactiveUserComponent
+    InactiveUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [LoggingService, ShoppingListService],
   bootstrap: [AppComponent]

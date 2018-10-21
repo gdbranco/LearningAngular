@@ -2,10 +2,11 @@
 <app-header (changeComponent)='onNavigate($event)'></app-header>
 <div class="container-fluid">
     <div class="col-md-12">
-        <div *ngIf="curComponent === 'Recipe';else other">
+        <!-- <div *ngIf="curComponent === 'Recipe';else other">
             <app-recipe></app-recipe>
         </div>
-        <ng-template #other><app-shopping></app-shopping></ng-template>
+        <ng-template #other><app-shopping></app-shopping></ng-template> -->
+        <app-home></app-home>
     </div>
 </div>
 <!-- <div class="container">

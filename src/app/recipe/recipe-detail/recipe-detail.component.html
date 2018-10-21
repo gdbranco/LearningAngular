@@ -11,15 +11,16 @@
           Manage Recipe
         </button>
         <div class="dropdown-menu">
-          <a 
+          <button 
             class="dropdown-item"
-            href="#"
-            (click)="onAddShoppingList()">To Shopping</a>
+            (click)="onAddShoppingList()">To Shopping</button>
           <a class="dropdown-item" href="#">Edit Recipe</a>
           <a class="dropdown-item" href="#">Delete Recipe</a>
         </div>
       </div>
+      <h3>Description</h3>
       <p>{{recipe.description}}</p>
+      <h3>Ingredients</h3>
       <ul class='list-group'>
         <li
           class="list-group-item"
